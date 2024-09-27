@@ -1,0 +1,164 @@
+2024-09-27 10:07:38.615 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2024-09-27 10:07:38.615 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration samsungtv_smart which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2024-09-27 10:07:38.615 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration localtuya which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2024-09-27 10:07:38.615 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration yasno_outages which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2024-09-27 10:07:39.554 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.fridge_night (<class 'homeassistant.components.utility_meter.sensor.UtilityMeterSensor'>) is using state class 'total_increasing' which is impossible considering device class ('current') it is using; expected None or one of 'measurement'; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+utility_meter%22
+2024-09-27 10:07:39.555 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.fridge_day (<class 'homeassistant.components.utility_meter.sensor.UtilityMeterSensor'>) is using state class 'total_increasing' which is impossible considering device class ('current') it is using; expected None or one of 'measurement'; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+utility_meter%22
+2024-09-27 10:07:39.556 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.light_kn_night (<class 'homeassistant.components.utility_meter.sensor.UtilityMeterSensor'>) is using state class 'total_increasing' which is impossible considering device class ('current') it is using; expected None or one of 'measurement'; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+utility_meter%22
+2024-09-27 10:07:39.557 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.counter_energy_night (<class 'homeassistant.components.utility_meter.sensor.UtilityMeterSensor'>) is using native unit of measurement 'кВт/ч' which is not a valid unit for the device class ('energy') it is using; expected one of ['Wh', 'MWh', 'MJ', 'kWh', 'GJ']; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+utility_meter%22
+2024-09-27 10:07:39.557 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.counter_energy_day (<class 'homeassistant.components.utility_meter.sensor.UtilityMeterSensor'>) is using native unit of measurement 'кВт/ч' which is not a valid unit for the device class ('energy') it is using; expected one of ['Wh', 'MWh', 'MJ', 'kWh', 'GJ']; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+utility_meter%22
+2024-09-27 10:07:39.557 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.meter_total_energy_night (<class 'homeassistant.components.utility_meter.sensor.UtilityMeterSensor'>) is using native unit of measurement 'кВт/ч' which is not a valid unit for the device class ('energy') it is using; expected one of ['Wh', 'MWh', 'MJ', 'kWh', 'GJ']; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+utility_meter%22
+2024-09-27 10:07:39.558 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.meter_total_energy_day (<class 'homeassistant.components.utility_meter.sensor.UtilityMeterSensor'>) is using native unit of measurement 'кВт/ч' which is not a valid unit for the device class ('energy') it is using; expected one of ['Wh', 'MWh', 'MJ', 'kWh', 'GJ']; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+utility_meter%22
+2024-09-27 10:07:41.173 ERROR (MainThread) [homeassistant.helpers.config_validation] The default_config integration does not support any configuration parameters, got {'frontend': {'themes': {}, 'extra_module_url': '/www/community/lovelace-card-mod/card-mod.js'}}. Please remove the configuration parameters from your configuration.
+2024-09-27 10:07:42.876 WARNING (MainThread) [custom_components.localtuya.coordinator] [bfd...d9s - Котёл заряд] Connection failed: [Errno 113] Host is unreachable ('192.168.2.213', '6668')
+2024-09-27 10:07:43.874 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.fridge_day')|float * states('input_text.off_limit')|float }} {% endif %}) renders=2>
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2273, in forgiving_float_filter
+    return float(value)
+           ^^^^^^^^^^^^
+ValueError: could not convert string to float: 'unknown'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 619, in async_render
+    render_result = _render_with_context(self.template, compiled, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2654, in _render_with_context
+    return template.render(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 1, in top-level template code
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2276, in forgiving_float_filter
+    raise_no_default("float", value)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1887, in raise_no_default
+    raise ValueError(
+ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.fridge_day')|float * states('input_text.off_limit')|float }} {% endif %}' but no default was specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 731, in async_render_to_info
+    render_info._result = self.async_render(  # noqa: SLF001
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 621, in async_render
+    raise TemplateError(err) from err
+homeassistant.exceptions.TemplateError: ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.fridge_day')|float * states('input_text.off_limit')|float }} {% endif %}' but no default was specified
+2024-09-27 10:07:43.876 ERROR (MainThread) [homeassistant.components.template.template_entity] TemplateError('ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.fridge_day')|float * states('input_text.off_limit')|float }} {% endif %}' but no default was specified') while processing template 'Template<template=({% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.fridge_day')|float * states('input_text.off_limit')|float }} {% endif %}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.fridge_day_cost'
+2024-09-27 10:07:43.876 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.fridge_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}) renders=2>
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2273, in forgiving_float_filter
+    return float(value)
+           ^^^^^^^^^^^^
+ValueError: could not convert string to float: 'unknown'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 619, in async_render
+    render_result = _render_with_context(self.template, compiled, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2654, in _render_with_context
+    return template.render(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 1, in top-level template code
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2276, in forgiving_float_filter
+    raise_no_default("float", value)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1887, in raise_no_default
+    raise ValueError(
+ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.fridge_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}' but no default was specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 731, in async_render_to_info
+    render_info._result = self.async_render(  # noqa: SLF001
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 621, in async_render
+    raise TemplateError(err) from err
+homeassistant.exceptions.TemplateError: ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.fridge_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}' but no default was specified
+2024-09-27 10:07:43.878 ERROR (MainThread) [homeassistant.components.template.template_entity] TemplateError('ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.fridge_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}' but no default was specified') while processing template 'Template<template=({% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.fridge_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.fridge_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.fridge_night_cost'
+2024-09-27 10:07:43.879 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.light_kn_day')|float * states('input_text.off_limit')|float }} {% endif %}) renders=2>
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2273, in forgiving_float_filter
+    return float(value)
+           ^^^^^^^^^^^^
+ValueError: could not convert string to float: 'unknown'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 619, in async_render
+    render_result = _render_with_context(self.template, compiled, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2654, in _render_with_context
+    return template.render(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 1, in top-level template code
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2276, in forgiving_float_filter
+    raise_no_default("float", value)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1887, in raise_no_default
+    raise ValueError(
+ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.light_kn_day')|float * states('input_text.off_limit')|float }} {% endif %}' but no default was specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 731, in async_render_to_info
+    render_info._result = self.async_render(  # noqa: SLF001
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 621, in async_render
+    raise TemplateError(err) from err
+homeassistant.exceptions.TemplateError: ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.light_kn_day')|float * states('input_text.off_limit')|float }} {% endif %}' but no default was specified
+2024-09-27 10:07:43.880 ERROR (MainThread) [homeassistant.components.template.template_entity] TemplateError('ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.light_kn_day')|float * states('input_text.off_limit')|float }} {% endif %}' but no default was specified') while processing template 'Template<template=({% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_day')|float * states('input_text.in_limit')|float }} {% else  %} {{ states('sensor.light_kn_day')|float * states('input_text.off_limit')|float }} {% endif %}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.light_kn_day_cost'
+2024-09-27 10:07:43.881 ERROR (MainThread) [homeassistant.helpers.event] Error while processing template: Template<template=({% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.light_kn_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}) renders=2>
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2273, in forgiving_float_filter
+    return float(value)
+           ^^^^^^^^^^^^
+ValueError: could not convert string to float: 'unknown'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 619, in async_render
+    render_result = _render_with_context(self.template, compiled, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2654, in _render_with_context
+    return template.render(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 1, in top-level template code
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 2276, in forgiving_float_filter
+    raise_no_default("float", value)
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 1887, in raise_no_default
+    raise ValueError(
+ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.light_kn_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}' but no default was specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 731, in async_render_to_info
+    render_info._result = self.async_render(  # noqa: SLF001
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/template.py", line 621, in async_render
+    raise TemplateError(err) from err
+homeassistant.exceptions.TemplateError: ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.light_kn_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}' but no default was specified
+2024-09-27 10:07:43.881 ERROR (MainThread) [homeassistant.components.template.template_entity] TemplateError('ValueError: Template error: float got invalid input 'unknown' when rendering template '{% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.light_kn_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}' but no default was specified') while processing template 'Template<template=({% if states('sensor.meter_total_energy_clear')|float <= states('input_text.consumption_limit')|float %} {{ states('sensor.light_kn_night')|float * states('input_text.in_limit')|float * states('input_text.night_coefficient')|float }} {% else  %} {{ states('sensor.light_kn_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }} {% endif %}) renders=4>' for attribute '_attr_native_value' in entity 'sensor.light_kn_night_cost'
+2024-09-27 10:13:09.297 ERROR (MainThread) [homeassistant.components.config] The default_config integration does not support any configuration parameters, got {'frontend': {'themes': {}, 'extra_module_url': '/www/community/lovelace-card-mod/card-mod.js'}}. Please remove the configuration parameters from your configuration.
+2024-09-27 10:13:10.193 ERROR (MainThread) [homeassistant.components.config] The default_config integration does not support any configuration parameters, got {'frontend': {'themes': {}, 'extra_module_url': '/www/community/lovelace-card-mod/card-mod.js'}}. Please remove the configuration parameters from your configuration.
+2024-09-27 10:13:11.802 ERROR (MainThread) [homeassistant.components.homeassistant] The default_config integration does not support any configuration parameters, got {'frontend': {'themes': {}, 'extra_module_url': '/www/community/lovelace-card-mod/card-mod.js'}}. Please remove the configuration parameters from your configuration.

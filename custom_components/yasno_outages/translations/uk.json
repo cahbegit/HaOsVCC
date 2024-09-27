@@ -1,0 +1,110 @@
+{
+  "title": "Yasno Відключення",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Налаштування Yasno Відключення",
+        "data": {
+          "city": "Оберіть своє місто:"
+        }
+      },
+      "group": {
+        "title": "Налаштування Yasno Відключення",
+        "data": {
+          "group": "Оберіть свою групу:"
+        },
+        "data_description": {
+          "group": "Знайдіть свою групу на: https://yasno.com.ua"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Налаштування Yasno Відключення",
+        "data": {
+          "city": "Оберіть своє місто:"
+        }
+      },
+      "group": {
+        "title": "Налаштування Yasno Відключення",
+        "data": {
+          "group": "Оберіть свою групу:"
+        },
+        "data_description": {
+          "group": "Знайдіть свою групу на: https://yasno.com.ua"
+        }
+      }
+    }
+  },
+  "selector": {
+    "city": {
+      "options": {
+        "kiev": "Київ",
+        "dnipro": "Дніпро"
+      }
+    },
+    "group": {
+      "options": {
+        "1": "Група 1",
+        "2": "Група 2",
+        "3": "Група 3",
+        "4": "Група 4",
+        "5": "Група 5",
+        "6": "Група 6",
+        "7": "Група 7",
+        "8": "Група 8",
+        "9": "Група 9",
+        "10": "Група 10",
+        "11": "Група 11",
+        "12": "Група 12"
+      }
+    }
+  },
+  "device": {
+    "yasno_outages": {
+      "name": "Yasno Група {group}"
+    }
+  },
+  "entity": {
+    "calendar": {
+      "calendar": {
+        "name": "Графік відключень",
+        "state_attributes": {
+          "message": {
+            "name": "Підключення",
+            "state": {
+              "off": "Відключення",
+              "maybe": "Можливе відключення"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "electricity": {
+        "name": "Електрика",
+        "state": {
+          "on": "Заживлено",
+          "off": "Відключення",
+          "maybe": "Можливе відключення"
+        }
+      },
+      "next_outage": {
+        "name": "Наступне відключення"
+      },
+      "next_possible_outage": {
+        "name": "Наступне можливе відключення"
+      },
+      "next_connectivity": {
+        "name": "Наступна заживленість"
+      }
+    }
+  },
+  "common": {
+    "electricity_on": "Заживлено",
+    "electricity_off": "Відключення",
+    "electricity_maybe": "Можливе відключення"
+  }
+}

@@ -1,0 +1,33 @@
+- switch:
+    entity_category: None
+    friendly_name: Switch
+    icon: ''
+    id: '1'
+    platform: switch
+- switch:
+    entity_category: config
+    friendly_name: Child Lock
+    icon: mdi:account-lock
+    id: '41'
+    platform: switch
+- sensor:
+    device_class: voltage
+    entity_category: diagnostic
+    friendly_name: V
+    id: '19'
+    platform: sensor
+    scaling: 0.1
+- sensor:
+    device_class: energy
+    entity_category: diagnostic
+    friendly_name: A
+    id: '18'
+    platform: sensor
+    scaling: 0.001
+- sensor:
+    device_class: power
+    entity_category: diagnostic
+    friendly_name: W
+    id: '20'
+    platform: sensor
+    scaling: 0.1

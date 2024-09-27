@@ -1,0 +1,30 @@
+    switch.1_ty_12z_switch_1:
+      friendly_name: "Калидор"
+    switch.1_ty_12z_switch_6:
+      friendly_name: "Спальня центр"
+    switch.1_ty_12z_switch_4:
+      friendly_name: "Зал центр"
+    switch.2_ty_12z_switch_1:
+      friendly_name: "Складовка"
+    switch.1_ty_12z_switch_5:
+      friendly_name: "Зал 2"
+    switch.2_ty_12z_switch_8:
+      friendly_name: "Зал балкон"
+    switch.1_ty_12z_switch_2:
+      friendly_name: "Вытяжка гардероб"
+    switch.1_ty_12z_switch_3:
+      friendly_name: "Вытяжка ванна"
+    switch.2_ty_12z_switch_7:
+      friendly_name: "Кухня балкон"
+    switch.2_ty_12z_switch_5:
+      friendly_name: "Кухня"
+    switch.2_ty_12z_switch_2:
+      friendly_name: "Ванна 1"
+    switch.2_ty_12z_switch_3:
+      friendly_name: "Ванна 2"
+    switch.2_ty_12z_switch_4:
+      friendly_name: "Душ"
+    switch.1_ty_12z_switch_7:
+      friendly_name: "Спальня бра лево"
+    switch.1_ty_12z_switch_8:
+      friendly_name: "Спальня бра право"

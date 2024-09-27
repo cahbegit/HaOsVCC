@@ -1,0 +1,23 @@
+{
+  "version": "6",
+  "minor_version": 1,
+  "key": "hacs.hacs",
+  "data": {
+    "archived_repositories": [
+      "alexarch21/history-explorer-card",
+      "digitaljamie/google-theme",
+      "DeebotUniverse/Deebot-4-Home-Assistant",
+      "Thomas55555/husqvarna_automower",
+      "disforw/inverse",
+      "chaptergy/noctis-grey",
+      "speleolontra/daikin_residential_altherma"
+    ],
+    "renamed_repositories": {
+      "arjenvrh/audi_connect_ha": "audiconnect/audi_connect_ha",
+      "htmltiger/config-editor-card": "junkfix/config-editor-card",
+      "htmltiger/config-editor": "junkfix/config-editor",
+      "htmltiger/numberbox-card": "junkfix/numberbox-card"
+    },
+    "ignored_repositories": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "minor_version": 7,
+  "key": "core.area_registry",
+  "data": {
+    "areas": [
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "gostinaia",
+        "labels": [],
+        "name": "Гостиная",
+        "picture": null,
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "kukhnia",
+        "labels": [],
+        "name": "Кухня",
+        "picture": null,
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "spalnia",
+        "labels": [],
+        "name": "Спальня",
+        "picture": null,
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "icon": null,
+        "id": "kvartira",
+        "labels": [],
+        "name": "Квартира",
+        "picture": null,
+        "created_at": "1970-01-01T00:00:00+00:00",
+        "modified_at": "1970-01-01T00:00:00+00:00"
+      }
+    ]
+  }
+}

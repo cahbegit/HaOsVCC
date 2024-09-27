@@ -1,0 +1,21 @@
+  username: cahbe
+  password: cahbe
+  max_retries: 3
+  default_measurement: state
+  database: cahbe
+  include:
+    entities:
+      - sensor.all_in_pro_power_2
+      - sensor.internet_power_2
+      - sensor.kholodilnik_power_2
+      - sensor.kondei_spalnia_power_2
+      - sensor.kondei_zal_power_2
+      - sensor.kotel_power_2
+      - sensor.kukhnia_prav_krylo_power_2
+      - sensor.kukhnia_rab_mesto_power_2
+      - sensor.stiralka_power_2
+      - sensor.svet_pitanie_power_2
+      - sensor.svet_platy_power_2
+      - sensor.kotel_zariad_power_2
+      - sensor.temperature_humidity_sensor_humidity_2
+      - sensor.temperature_humidity_sensor_temperature_2

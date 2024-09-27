@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "image",
+  "data": {
+    "items": [
+      {
+        "id": "4aab2dafdec4c86f78624afd3c53b37a",
+        "filesize": 674834,
+        "content_type": "image/png",
+        "name": "Снимок1.PNG",
+        "uploaded_at": "2024-09-03T15:20:24.508058+00:00"
+      },
+      {
+        "id": "20011a3f1561a697c7e6a8c4f9516aeb",
+        "filesize": 674834,
+        "content_type": "image/png",
+        "name": "Снимок1.PNG",
+        "uploaded_at": "2024-09-03T15:22:08.594712+00:00"
+      },
+      {
+        "id": "78d293a0c04317e6d908550410938607",
+        "filesize": 674834,
+        "content_type": "image/png",
+        "name": "Снимок1.PNG",
+        "uploaded_at": "2024-09-03T15:22:11.874798+00:00"
+      }
+    ]
+  }
+}

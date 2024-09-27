@@ -1,0 +1,72 @@
+- switch:
+    entity_category: None
+    friendly_name: Switch 1
+    icon: ''
+    id: '1'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 2
+    icon: ''
+    id: '2'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 3
+    icon: ''
+    id: '3'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 4
+    icon: ''
+    id: '4'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 5
+    icon: ''
+    id: '5'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 6
+    icon: ''
+    id: '6'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 7
+    icon: ''
+    id: '101'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 8
+    icon: ''
+    id: '102'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 9
+    icon: ''
+    id: '103'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 10
+    icon: ''
+    id: '104'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 11
+    icon: ''
+    id: '105'
+    platform: switch
+- switch:
+    entity_category: None
+    friendly_name: Switch 12
+    icon: ''
+    id: '106'
+    platform: switch

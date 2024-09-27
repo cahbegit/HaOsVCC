@@ -1,0 +1,20 @@
+- id: '1711614578475'
+  name: '4'
+  entities:
+    switch.ty_12z_switch_4:
+      device_class: outlet
+      friendly_name: TY-12Z Выключатель 4
+      state: 'off'
+  metadata:
+    switch.ty_12z_switch_4:
+      entity_only: true
+- id: '1711614728475'
+  name: '7'
+  entities:
+    switch.ty_12z_switch_7:
+      device_class: outlet
+      friendly_name: TY-12Z Выключатель 7
+      state: 'off'
+  metadata:
+    switch.ty_12z_switch_7:
+      entity_only: true

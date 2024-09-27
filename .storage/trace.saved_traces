@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "trace.saved_traces",
+  "data": {
+    "automation.tariff_switching": [
+      {
+        "extended_dict": {
+          "last_step": "action/0/choose/1/conditions/0/entity_id/0",
+          "run_id": "350fc2aba9b98b58c392a9d1fa0c1fc2",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-09-27T07:10:00.474501+00:00",
+            "finish": "2024-09-27T07:10:00.475608+00:00"
+          },
+          "domain": "automation",
+          "item_id": "tariff_switching",
+          "trigger": "time pattern",
+          "trace": {
+            "trigger/1": [
+              {
+                "path": "trigger/1",
+                "timestamp": "2024-09-27T07:10:00.474542+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.tariff_switching",
+                    "state": "on",
+                    "attributes": {
+                      "id": "tariff_switching",
+                      "last_triggered": "2024-09-27T07:05:00.356797+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "tariff_switching"
+                    },
+                    "last_changed": "2024-09-27T07:07:41.302308+00:00",
+                    "last_reported": "2024-09-27T07:07:41.302308+00:00",
+                    "last_updated": "2024-09-27T07:07:41.302308+00:00",
+                    "context": {
+                      "id": "01J8S4X2VPGNV5EFSSZQ56ZBHM",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "1",
+                    "idx": "1",
+                    "alias": null,
+                    "platform": "time_pattern",
+                    "now": "2024-09-27T10:10:00.474313+03:00",
+                    "description": "time pattern"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-09-27T07:10:00.475173+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J8S51ART3DBD78JGAATJ9KXK",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                }
+              }
+            ],
+            "action/0/choose/0": [
+              {
+                "path": "action/0/choose/0",
+                "timestamp": "2024-09-27T07:10:00.475349+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "action/0/choose/0/conditions/0": [
+              {
+                "path": "action/0/choose/0/conditions/0",
+                "timestamp": "2024-09-27T07:10:00.475367+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/0/choose/0/conditions/0/entity_id/0": [
+              {
+                "path": "action/0/choose/0/conditions/0/entity_id/0",
+                "timestamp": "2024-09-27T07:10:00.475380+00:00",
+                "result": {
+                  "result": true,
+                  "state": "off",
+                  "wanted_state": "off"
+                }
+              }
+            ],
+            "action/0/choose/0/conditions/1": [
+              {
+                "path": "action/0/choose/0/conditions/1",
+                "timestamp": "2024-09-27T07:10:00.475416+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "action/0/choose/0/conditions/1/entity_id/0": [
+              {
+                "path": "action/0/choose/0/conditions/1/entity_id/0",
+                "timestamp": "2024-09-27T07:10:00.475436+00:00",
+                "result": {
+                  "result": false,
+                  "state": "day",
+                  "wanted_state": "night"
+                }
+              }
+            ],
+            "action/0/choose/1": [
+              {
+                "path": "action/0/choose/1",
+                "timestamp": "2024-09-27T07:10:00.475479+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "action/0/choose/1/conditions/0": [
+              {
+                "path": "action/0/choose/1/conditions/0",
+                "timestamp": "2024-09-27T07:10:00.475492+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "action/0/choose/1/conditions/0/entity_id/0": [
+              {
+                "path": "action/0/choose/1/conditions/0/entity_id/0",
+                "timestamp": "2024-09-27T07:10:00.475500+00:00",
+                "result": {
+                  "result": false,
+                  "state": "off",
+                  "wanted_state": "on"
+                }
+              }
+            ]
+          },
+          "config": {
+            "alias": "tariff_switching",
+            "id": "tariff_switching",
+            "description": "\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u0442\u0430\u0440\u0438\u0444\u043e\u0432",
+            "initial_state": true,
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "binary_sensor.night"
+              },
+              {
+                "platform": "time_pattern",
+                "minutes": "/5"
+              }
+            ],
+            "action": [
+              {
+                "choose": [
+                  {
+                    "conditions": [
+                      {
+                        "condition": "state",
+                        "entity_id": "binary_sensor.night",
+                        "state": "off"
+                      },
+                      {
+                        "condition": "state",
+                        "entity_id": "select.counter_energy",
+                        "state": "night"
+                      }
+                    ],
+                    "sequence": [
+                      {
+                        "target": {
+                          "entity_id": [
+                            "select.counter_energy",
+                            "select.meter_total_energy",
+                            "select.fridge",
+                            "select.workplace",
+                            "select.light_kn"
+                          ]
+                        },
+                        "data": {
+                          "option": "day"
+                        },
+                        "action": "select.select_option"
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": [
+                      {
+                        "condition": "state",
+                        "entity_id": "binary_sensor.night",
+                        "state": "on"
+                      },
+                      {
+                        "condition": "state",
+                        "entity_id": "select.counter_energy",
+                        "state": "day"
+                      }
+                    ],
+                    "sequence": [
+                      {
+                        "target": {
+                          "entity_id": [
+                            "select.counter_energy",
+                            "select.meter_total_energy",
+                            "select.fridge",
+                            "select.workplace",
+                            "select.light_kn"
+                          ]
+                        },
+                        "data": {
+                          "option": "night"
+                        },
+                        "action": "select.select_option"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J8S51ART3DBD78JGAATJ9KXK",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0/choose/1/conditions/0/entity_id/0",
+          "run_id": "350fc2aba9b98b58c392a9d1fa0c1fc2",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-09-27T07:10:00.474501+00:00",
+            "finish": "2024-09-27T07:10:00.475608+00:00"
+          },
+          "domain": "automation",
+          "item_id": "tariff_switching",
+          "trigger": "time pattern"
+        }
+      }
+    ]
+  }
+}
